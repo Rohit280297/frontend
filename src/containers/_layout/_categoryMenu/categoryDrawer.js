@@ -752,7 +752,7 @@ class CategoryDrawer extends React.Component {
   render() {
     let categoryType = dataSource.map((category, categoryKey) => {
       let subCategory = category.sub.map((subCategory, subCategoryKey) => {
-        return (<Menu.Item key={subCategoryKey} onClick = {(e) => this.handleClick(e, subCategory.code)}>{subCategory.name}</Menu.Item>);
+        return (<Menu.Item key={subCategory.code} onClick = {(e) => this.handleClick(e, subCategory.code)}>{subCategory.name}</Menu.Item>);
       });
       return (<SubMenu key={categoryKey} title={<span><Icon type="bars" /><span>{category.type}</span></span>}>
         {subCategory}
@@ -771,7 +771,6 @@ class CategoryDrawer extends React.Component {
           visible={this.state.visible}
         >
         <Menu
-          defaultSelectedKeys={['0']}
           mode="inline"
           theme="dark"
           inlineCollapsed={this.state.collapsed}
