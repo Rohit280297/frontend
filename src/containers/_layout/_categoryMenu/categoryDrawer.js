@@ -256,7 +256,7 @@ const dataSource = [{
         collapsed: false
       }, {
         name: 'Metric Geometry',
-        code: 'math.MP',
+        code: 'math.MG',
         collapsed: false
       }, {
         name: 'Mathematical Physics',
@@ -268,7 +268,7 @@ const dataSource = [{
         collapsed: false
       }, {
         name: 'Number Theory',
-        code: 'math.MP',
+        code: 'math.NT',
         collapsed: false
       }, {
         name: 'Operator Algebras',
