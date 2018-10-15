@@ -1,4 +1,4 @@
-# Bootstrapped with create-react-app
+# Research Kernel's Frontend 
 
 ## Step to run:
 1. ``yarn install``
