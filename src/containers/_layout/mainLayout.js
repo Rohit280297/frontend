@@ -8,7 +8,7 @@ import Contact from '../contact/contact'
 import Donate from '../donate/donate'
 import Recent from '../recent/recent'
 import { connect } from 'react-redux';
-
+import PaperComponent from '../paper_template/paper_temp';
 const { Content, Footer } = Layout;
 
 class MainLayout extends React.Component {
@@ -59,6 +59,7 @@ class MainLayout extends React.Component {
         <Footer style={{ textAlign: 'center' }}>
           arxiv-Sanity
         </Footer>
+        <PaperComponent/>
       </Layout>
     );
   }
