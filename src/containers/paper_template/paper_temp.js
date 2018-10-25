@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Skeleton,List,Icon} from 'antd';
+import axios from 'axios';
 import './paper_template.css';
 const data = [{
   title:"VoxelMorph : A Learning Framework for Image Registration.",
@@ -23,12 +24,16 @@ const IconComp = ({type,text})=>(
 class PaperComponent extends Component {
 
   state={
-    loading:true
+    loading:true,
+    recentData:null
   }
 
 
   componentDidMount =()=>{
-    setTimeout(()=>this.setState({loading:false}),5000);
+    // setTimeout(()=>this.setState({loading:false}),5000);
+    axios.get("/v1/categories").then(res=>{
+      this.setState({recentData:res.data,loading:false})
+    }).catch(err=>console.log(err));  
 }
 
   render() {
